@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center">
+  <h1 class="text-center"><img style="width:250px;" src="assets/logo.png" alt=""></h1>
+</div>
+
+<div class="d-flex justify-content-center"><img style="width:200px;" [src]="pokemon.picture" alt=""></div>
+<h5 class="text-center">{{pokemon.fullname}}</h5>
+<p class="text-center">id : {{pokemon.id}}</p>
+<p class="text-center">cp : {{pokemon.cp}}</p>
+<p class="text-center">hp : {{pokemon.hp}}</p>
+<p class="text-center">type : {{pokemon.types}}</p>
+<p class="text-center">date : {{pokemon.created | date: "dd/MM/yyyy"}}</p>
+
+<br><br>
+
+<div class="d-flex justify-content-center">
+  <a [routerLink]="['']"><button type="button" class="btn btn-secondary">Retour</button></a>
+  <a [routerLink]="['/edit', pokemon.id]"><button type="button" class="btn btn-primary">Edition</button></a>
+  <a (click)="onDelete()"><button type="button" class="btn btn-danger">Suppression</button></a>
+</div>
+<br><br><br>

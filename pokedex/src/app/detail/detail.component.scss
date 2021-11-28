@@ -1,0 +1,32 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%; /*  permet d'utiliser de amnière logique le rem (1rem = 10px) */
+}
+
+body,
+h1,
+h2,
+h3,
+p
+{
+  margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}

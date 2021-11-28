@@ -1,0 +1,75 @@
+<div class="d-flex justify-content-center">
+  <h1 class="text-center"><img style="width:250px;" src="assets/logo.png" alt=""></h1>
+</div>
+
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <h1>CRÉATION DU POKEMON</h1>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <form *ngIf="pokemon" (ngSubmit)="onAdd(f)" #f="ngForm">
+
+        <!-- input FULLNAME -->
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="pokemon.fullname" name="fullname"
+            #fullname="ngModel">
+        </div>
+
+        <!-- input PICTURE -->
+        <div class="form-group">
+          <label for="picture">Photo</label>
+          <input type="text" class="form-control" id="picture" [(ngModel)]="pokemon.picture" name="picture"
+            #name="ngModel">
+        </div>
+
+        <!-- input ID -->
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="text" class="form-control" [placeholder]="pokemon.id" required [(ngModel)]="pokemon.id"
+            name="id">
+        </div>
+
+        <!-- input CP -->
+        <div class="form-group">
+          <label for="cp">CP</label>
+          <input type="text" class="form-control" [placeholder]="pokemon.cp" required [(ngModel)]="pokemon.cp"
+            name="cp">
+        </div>
+
+        <!-- input HP -->
+        <div class="form-group">
+          <label for="hp">HP</label>
+          <input type="text" class="form-control" [placeholder]="pokemon.hp" required [(ngModel)]="pokemon.hp"
+            name="hp">
+        </div>
+
+        <!-- input TYPE -->
+        <div class="form-group">
+          <label for="types">TYPE</label>
+          <input type="text" class="form-control" [placeholder]="pokemon.types" required [(ngModel)]="pokemon.types"
+            name="types">
+        </div>
+
+        <!-- input DATE -->
+        <div class="form-group">
+          <label for="created">DATE</label>
+          <input type="date" class="form-control" [placeholder]="pokemon.created" required [(ngModel)]="pokemon.created"
+            name="created">
+        </div>
+
+
+        <br><br>
+        <!-- Submit button -->
+        <div class="d-flex justify-content-center">
+          <a [routerLink]="['']"><button type="button" class="btn btn-secondary">Retour</button></a>
+          <button type="submit" class="btn btn-dark" (click)="audi()">Valider</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <br><br><br><br><br><br>
